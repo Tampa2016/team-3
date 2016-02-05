@@ -17,3 +17,7 @@ Important Websites:
   -http://www.ada.gov/filing_complaint.htm
   
   -http://www.ada.gov/regs2010/2010ADAStandards/2010ADAstandards.htm
+
+  -http://www.christopherreeve.org/site/c.ddJFKRNoFiG/b.4048063/k.67BA/The_Christopher_amp_Dana_Reeve_Foundation__Paralysis_amp_Spinal_Cord_Injury.htm
+  
+  -http://www.spinalcordinjury-paralysis.org/discussions
