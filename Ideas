@@ -2,6 +2,12 @@ Ideas
 
 Connecting volunteers to those with needs.
 
+Database
+  -Users(name, etc), points, type of user: volunteer etc, grab information from yelp
+  -allow someone to upload image to newsfeed, if we click image, we can pull more information about the image. 
+  -display a newsfeed to people using the app (based on location (if time permits))
+  -accessabilities: attribiutes, what's available. 
+
 Instagram meets yelp, when people take pictures or videos, their location can be targeted for further use.
   -"Explore around me" option
 
