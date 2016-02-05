@@ -11,5 +11,5 @@ Scott Liu
 
 Nick Miller
 
-Kristie
+Kristie Harvick
 
