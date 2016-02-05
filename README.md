@@ -15,4 +15,5 @@ About the Team:
 Important Websites:
 
   -http://www.ada.gov/filing_complaint.htm
+  
   -http://www.ada.gov/regs2010/2010ADAStandards/2010ADAstandards.htm
