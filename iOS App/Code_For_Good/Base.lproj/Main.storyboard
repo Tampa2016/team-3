@@ -328,7 +328,7 @@
                                 <rect key="frame" x="187" y="432" width="133" height="30"/>
                                 <state key="normal" title="Log in"/>
                                 <connections>
-                                    <segue destination="zjD-LG-tTG" kind="modal" modalTransitionStyle="flipHorizontal" id="Fck-oZ-CCf"/>
+                                    <segue destination="zjD-LG-tTG" kind="modal" identifier="LoginToApp" modalTransitionStyle="flipHorizontal" id="Fck-oZ-CCf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-oY-R1Q">
@@ -369,10 +369,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afb-Kk-Oxl">
                                 <rect key="frame" x="0.0" y="432" width="148" height="30"/>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="QPo-IA-nLO" eventType="touchUpInside" id="cEm-0c-gFK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="wkh-5W-p53" id="Xtl-0P-fp9"/>
+                        <outlet property="usernameTextField" destination="rf6-YP-a2O" id="1EB-gp-qMb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4oZ-iD-lYM" sceneMemberID="firstResponder"/>
             </objects>

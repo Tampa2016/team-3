@@ -11,9 +11,17 @@ import BDBOAuth1Manager
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FBSDKShareKit
+import Firebase
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
-
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    var ref = Firebase(url:"https://incandescent-inferno-8240.firebaseio.com")
+    
+    var isMatch = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +37,20 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signUp(sender: AnyObject) {
+        if (usernameTextField.text != "" && passwordTextField.text != "") {
+            var person = ["password": passwordTextField.text!]
+            var usersRef = ref.childByAppendingPath("users")
+//            var users = [usernameTextField.text!: person]
+//            usersRef.setValue(users)
+            
+            usersRef.childByAutoId().setValue([
+                "username": usernameTextField.text!,
+                "password": passwordTextField.text!
+            ])
+            
+        }
+    }
 
     @IBAction func onLogin(sender: AnyObject) {
         TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
@@ -51,6 +73,42 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User logged out")
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if (identifier == "LoginToApp") {
+            
+            var usersRef = ref.childByAppendingPath("users")
+            
+            usersRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                if let people = snapshot.children {
+                    
+                    for (var i = 0; i < Int(snapshot.childrenCount); i++) {
+                        
+                        let person = people.nextObject() as! FDataSnapshot
+                        
+                        let user = person.value
+                        
+                        print("\(user["username"])")
+                        print("\(user["password"])")
+                        
+                        if (String(user["username"]) == self.usernameTextField.text! && String(user["password"]) == self.passwordTextField.text!) {
+                            self.isMatch = true
+                        }
+
+                        
+                    }
+                    
+                }
+            })
+        }
+        
+        if (isMatch) {
+            return true
+        }
+        else {
+            return false
+        }
     }
 
 }
