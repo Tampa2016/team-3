@@ -8,13 +8,20 @@
 
 import UIKit
 import BDBOAuth1Manager
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        var loginButton = FBSDKLoginButton()
+        loginButton.delegate = self
+        loginButton.frame = CGRectMake(20, 470, 150, 40)
+        loginButton.readPermissions = ["email", "user_friends"]
+        self.view.addSubview(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +43,14 @@ class LoginViewController: UIViewController {
                 print("Failed to get the request")
         }
         
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        print("User logged in")
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("User logged out")
     }
 
 }
