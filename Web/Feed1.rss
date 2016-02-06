@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <generator>RSS Builder by B!Soft</generator>
+    <title>yADA yADA yADA</title>
+    <link>http://ec2-54-159-213-138.compute-1.amazonaws.com/</link>
+    <description>feed for yADA yADA yADA</description>
+    <language>en-us</language>
+    <image>
+      <title>yADA yADA yADA</title>
+      <link>http://ec2-54-159-213-138.compute-1.amazonaws.com/</link>
+      <url>http://static.comicvine.com/uploads/original/11113/111130781/3350419-christopher-reeve1.jpg</url>
+    </image>
+    <item>
+      <title>Physical Rehabilitation Centers for those in Need</title>
+      <pubDate>Sat, 6 Feb 2016 01:04:27 -0500</pubDate>
+      <link>http://www.sci-info-pages.com/rehabs.html</link>
+      <description><![CDATA[]]></description>
+    </item>
+    <item>
+      <title>Discussion Page for the Christopher and Dana Reeve Foundation</title>
+      <pubDate>Sat, 6 Feb 2016 01:03:11 -0500</pubDate>
+      <link>http://www.spinalcordinjury-paralysis.org/discussions</link>
+      <author>Samuel Swanson</author>
+      <description><![CDATA[This page is a dedicated discussion page to connect those facing paralysis. ]]></description>
+    </item>
+    <item>
+      <title>Christopher and Dana Reeve Foundation</title>
+      <pubDate>Sat, 6 Feb 2016 01:00:11 -0500</pubDate>
+      <link>http://www.christopherreeve.org/site/c.ddJFKRNoFiG/b.4048063/k.67BA/The_Christopher_amp_Dana_Reeve_Foundation__Paralysis_amp_Spinal_Cord_Injury.htm</link>
+      <author>Andrew Zhang</author>
+      <description><![CDATA[The Christopher and Dana Reeves Foundation has been aiding those with paralysis for over 34 years. ]]></description>
+    </item>
+  </channel>
+</rss>
