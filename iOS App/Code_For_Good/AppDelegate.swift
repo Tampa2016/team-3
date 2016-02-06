@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import BDBOAuth1Manager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -92,7 +93,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return managedObjectContext
     }()
 
-    // MARK: - Core Data Saving support
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        TwitterClient.sharedInstance.fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuth1Credential(queryString: url.query), success: { (accessToken: BDBOAuth1Credential!) -> Void in
+            print("Got access token")
+            TwitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
+            
+            //            TwitterClient.sharedInstance.GET("1.1/account/verify_credentials.json", parameters: nil, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            //                print("User: \(response)")
+            //                }, failure: { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
+            //                    print("Did not get user")
+            //            })
+            
+            TwitterClient.sharedInstance.GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+                print("Timeline: \(response)")
+                }, failure: { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
+                    print("failed to get timeline")
+            })
+            
+            
+            }) { (error: NSError!) -> Void in
+                print("Failed to receive access token")
+        }
+        
+        return true
+    }
 
     func saveContext () {
         if managedObjectContext.hasChanges {

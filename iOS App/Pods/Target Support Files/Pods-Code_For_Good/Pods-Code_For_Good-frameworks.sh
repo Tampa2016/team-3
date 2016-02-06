@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Code_For_Good/AFNetworking.framework"
+  install_framework "Pods-Code_For_Good/BDBOAuth1Manager.framework"
   install_framework "Pods-Code_For_Good/Firebase.framework"
   install_framework "Pods-Code_For_Good/MBProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Code_For_Good/AFNetworking.framework"
+  install_framework "Pods-Code_For_Good/BDBOAuth1Manager.framework"
   install_framework "Pods-Code_For_Good/Firebase.framework"
   install_framework "Pods-Code_For_Good/MBProgressHUD.framework"
 fi
