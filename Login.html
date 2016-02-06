@@ -8,15 +8,15 @@
   <body>
     <div id='messagesDiv'></div>
     <input type='text' id='nameInput' placeholder='Name'>
-    <input type='text' id='messageInput' placeholder='Message'>
+    <input type='text' id='typeInput' placeholder='Type'>
     <script>
       var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
-      $('#messageInput').keypress(function (e) {
+      $('#typeInput').keypress(function (e) {
         if (e.keyCode == 13) {
-          var name = $('#nameInput').val();
-          var text = $('#messageInput').val();
-          myDataRef.child("user").push({name: name, text: text});
-          $('#messageInput').val('');
+          var namer = $('#nameInput').val();
+          var type = $('#typeInput').val();
+          myDataRef.child("user").update({namer: { points:"0", text: type}});
+          $('#typeInput').val('');
         }
       });
     </script>
