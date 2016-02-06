@@ -2,8 +2,24 @@ Ideas
 
 Connecting volunteers to those with needs.
 
+Database
+  -Users(name, etc), points, type of user: volunteer etc, grab information from yelp
+  -allow someone to upload image to newsfeed, if we click image, we can pull more information about the image. 
+  -display a newsfeed to people using the app (based on location (if time permits))
+  -accessabilities: attribiutes, what's available. 
+  -create instances in databsase which contain the location or profile of a place with a respective score. 
+
 Instagram meets yelp, when people take pictures or videos, their location can be targeted for further use.
-  -"Explore around me" option
+  -"Explore around me" option. Find nearby locations (in categories such as emergency, hotel, restaurant, entertainment, etc.)
+  -Clicking on a page brings up a list with nearby options in that category ranked by ADA accesibility score and Yelp score.
+  -Possible direct message request option for users to communicate/ask more about a given post
+  
+Web and Mobile app
 
 Incentivize with company sponsorships that give rewards based on points system.
   -Points earned for posting photos/videos/reviews
+  -Redeem pionts for giftcards/prizes
+  
+
+
+Reference URL to firebase: https://incandescent-inferno-8240.firebaseio.com/
