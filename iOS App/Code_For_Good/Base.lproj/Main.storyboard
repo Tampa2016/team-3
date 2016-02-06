@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,12 +16,124 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMO-Wq-jxZ">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="sUq-HJ-8FI" kind="modal" modalTransitionStyle="flipHorizontal" id="W5g-lu-GFd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="234.66666666666666" y="366.83333333333331"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="YpY-8k-6RL">
+            <objects>
+                <viewController restorationIdentifier="ExploreNavigationController" storyboardIdentifier="ExploreNavigationController" id="nU0-jH-mmb" customClass="ExploreViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mqt-kM-Dbd"/>
+                        <viewControllerLayoutGuide type="bottom" id="S6b-Cs-LyJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HsE-yy-X1z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vwL-Gu-AXz">
+                                <rect key="frame" x="0.0" y="85" width="320" height="411"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i4Z-Vs-NVA">
+                                    <size key="itemSize" width="111" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreCollectionViewCell" id="mn5-nZ-gyW" customClass="ExploreCollectionViewCell" customModule="Code_For_Good" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="111" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Shr-Vp-e9R"/>
+                    <navigationItem key="navigationItem" id="yAu-of-aGm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjK-wo-FTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="-347"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="CLr-eb-bcb">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="MK5-s1-ppJ" customClass="PhotoViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fEz-eo-u8x"/>
+                        <viewControllerLayoutGuide type="bottom" id="FBG-Tf-Kek"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qSV-mx-NbR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="uwo-Jq-2wp"/>
+                    <navigationItem key="navigationItem" id="jSP-jM-zJ4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQk-l3-90j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="366"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="eJe-lb-zhi">
+            <objects>
+                <viewController id="hpY-TM-GnV" customClass="ProfileViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="76f-CV-riY"/>
+                        <viewControllerLayoutGuide type="bottom" id="CoC-ly-bWI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VWF-oc-U9O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Atp-of-19F"/>
+                    <navigationItem key="navigationItem" id="QTk-yP-FmB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHa-B3-1ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="1113"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Zz-fQ-kwm">
+            <objects>
+                <tabBarController id="sUq-HJ-8FI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="MIc-CO-VMO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nU0-jH-mmb" kind="relationship" relationship="viewControllers" id="Lwi-uw-zO3"/>
+                        <segue destination="MK5-s1-ppJ" kind="relationship" relationship="viewControllers" id="yji-m3-n5T"/>
+                        <segue destination="hpY-TM-GnV" kind="relationship" relationship="viewControllers" id="xCF-40-VKW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="me5-3v-fDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="366"/>
         </scene>
     </scenes>
 </document>

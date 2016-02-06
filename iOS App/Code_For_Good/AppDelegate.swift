@@ -17,6 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        let exploreNavigationController = storyboard.instantiateViewControllerWithIdentifier("YadaExploreNavigationController") as! UINavigationController
+////        let exploreViewController = exploreNavigationController.topViewController as! ExploreViewController
+//        exploreNavigationController.tabBarItem.title = "FirstTab"
+////        nowPlayingNavigationController.tabBarItem.image = UIImage(named: "now_playing")
+//        
+//        let photoNavigationController = storyboard.instantiateViewControllerWithIdentifier("YadaPhotoNavigationController") as! UINavigationController
+////        let photoViewController = photoNavigationController.topViewController as! PhotoViewController
+//        photoNavigationController.tabBarItem.title = "Second Tab"
+//////        topRatedNavigationController.tabBarItem.image = UIImage(named: "top_rated")
+//        
+//        let tabBarController = UITabBarController()
+//        tabBarController.viewControllers = [exploreNavigationController, photoNavigationController]
+//        
+//        window?.rootViewController = tabBarController
+//        window?.makeKeyAndVisible()
+        
         return true
     }
 
