@@ -13,6 +13,8 @@
     }
 }
 </script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 </head>
 
 
@@ -20,11 +22,10 @@
 <body>
 	<div id="main">
     <h1 align = "center"> Welcome to yADA yADA yADA </h1>
-    <a href="Login.html">Click Here</a>
 	<h2 align = "center"> JP Morgan Chase & Co. </h2>
 	<h3 align = "center"> Christopher & Dana Reeve </Foundationh3>
 	<p> <input type="text" id = 'nameInput' placeholder = 'Username'> </p>
-    <p> <input type='text' id = 'typeInput' placeholder = 'Password'> </p>
+    	<p> <input type='text' id = 'typeInput' placeholder = 'Password'> </p>
     <input type="submit">
 	<p> Explore </p>
     
@@ -33,6 +34,18 @@
     Name: <input type="text" name="fname">
     <input type="submit" value="Submit">
     </form>
+    
+    <script>
+      var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
+      $('#typeInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var namer = $('#nameInput').val();
+          var type = $('#typeInput').val();
+          myDataRef.child("user").update({namer: { points:"0", pass: type}});
+          $('#typeInput').val('');
+        }
+      });
+    </script>
 
     
     <footer id="foot01"></footer>
@@ -42,3 +55,4 @@
 
 </body>
 </html>
+
