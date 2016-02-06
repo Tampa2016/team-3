@@ -4,7 +4,7 @@ About the Team:
 
   -Andrew Zhang
 
-  -Sam Swanson
+  -Sam Swanson WebDev: CSS, Java, HTML, PHP
 
   -Scott Liu
 
