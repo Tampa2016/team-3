@@ -98,10 +98,12 @@ function checkLoginState() {
       var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
       $('#typeInput').keypress(function (e) {
         if (e.keyCode == 13) {
+          $('#typeInput').attr('href', 'explore.html');
           var namer = $('#nameInput').val();
           var type = $('#typeInput').val();
           myDataRef.child("user").push({Name: namer, points:"0", pass: type});
           $('#typeInput').val('');
+          $('#nameInput').val('');
         }
       });
     </script>
