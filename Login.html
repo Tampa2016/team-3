@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  </head>
+  <body>
+    <input type="text" id = 'nameInput' placeholder = 'Name'>
+    <input type='text' id = 'typeInput' placeholder = 'Type'>
+  <script> 
+  var dataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
+  var userRef = dataRef.child("users");
+  
+  $('#typeInput').keypress(function (e) {
+    if(e.keyCode == 13){
+      var name = $('#nameInput').val();
+      var type = $('#typeInput').val();
+      
+      userRef.set({
+        users: 
+        {
+          name:{ 
+          Type: type;}
+        }
+      });
+    }
+  }
+  
+  
+  </script>
+  
+  
+  </body>
+</html>
