@@ -54,5 +54,15 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
 //        let dimensions = CGFloat(Int(totalwidth) / numberOfCellsPerRow)
 //        return CGSizeMake(dimensions, dimensions)
 //    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "ExploreToResults") {
+            let cell = sender as! UICollectionViewCell
+            let indexPath = collectionView.indexPathForCell(cell)
+            
+            let exploreResultsviewController = segue.destinationViewController as! ExploreResultsViewController
+            exploreResultsviewController.mySearch = categoryNames[indexPath!.row]
+        }
+    }
 
 }

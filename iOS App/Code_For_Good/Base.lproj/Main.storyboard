@@ -50,7 +50,7 @@
                                         <connections>
                                             <outlet property="categoryImageView" destination="Rdr-xy-HTi" id="zXN-e3-2CP"/>
                                             <outlet property="categoryNameLabel" destination="ZNa-gk-8Yg" id="Aqm-eY-YS3"/>
-                                            <segue destination="352-Li-eI2" kind="push" id="7PK-yr-OtK"/>
+                                            <segue destination="352-Li-eI2" kind="push" identifier="ExploreToResults" id="7PK-yr-OtK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -81,26 +81,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GcI-yk-FRU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GcI-yk-FRU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ExploreResultsTableViewCell" rowHeight="77" id="Aty-8J-kDE" customClass="ExploreResultsTableViewCell" customModule="Code_For_Good" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="77"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ExploreResultsTableViewCell" rowHeight="103" id="Aty-8J-kDE" customClass="ExploreResultsTableViewCell" customModule="Code_For_Good" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aty-8J-kDE" id="Yib-yc-qYj">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="76.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="102.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eli-Zu-pRN">
-                                                    <rect key="frame" x="8" y="28" width="45" height="21"/>
+                                                    <rect key="frame" x="86" y="3" width="201" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtt-B9-ibW">
+                                                    <rect key="frame" x="8" y="8" width="70" height="76"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi3-f0-K3e">
+                                                    <rect key="frame" x="242" y="28" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-FQ-rBv">
+                                                    <rect key="frame" x="86" y="26" width="124" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L1-IF-DNH">
+                                                    <rect key="frame" x="86" y="67" width="148" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKe-cy-cFR">
+                                                    <rect key="frame" x="86" y="47" width="132" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="addressLabel" destination="CKe-cy-cFR" id="EHt-J7-m0w"/>
+                                            <outlet property="businessImageView" destination="xtt-B9-ibW" id="XRY-zN-ALI"/>
+                                            <outlet property="categoriesLabel" destination="2L1-IF-DNH" id="Wi5-K1-kKB"/>
+                                            <outlet property="distanceLabel" destination="XLw-FQ-rBv" id="hhp-Us-QTT"/>
+                                            <outlet property="nameLabel" destination="eli-Zu-pRN" id="Leh-i9-4Cs"/>
+                                            <outlet property="scoreLabel" destination="Vi3-f0-K3e" id="aP3-pe-94X"/>
                                             <segue destination="Cft-Db-8jl" kind="push" id="Zzn-yg-JgS"/>
                                         </connections>
                                     </tableViewCell>
@@ -426,6 +459,6 @@
         <image name="ic_public" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2au-rO-c0b"/>
+        <segue reference="Zzn-yg-JgS"/>
     </inferredMetricsTieBreakers>
 </document>
