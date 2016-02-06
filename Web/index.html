@@ -5,7 +5,7 @@
 	<title> Code for Good Team 3 </title>
      <link href="site.css" rel="stylesheet">
      <script>
-}
+
 </script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
@@ -67,7 +67,6 @@ function checkLoginState() {
                       statusChangeCallback(response);
                         });
           
-            };
   // Load the SDK asynchronously
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -88,15 +87,21 @@ function checkLoginState() {
 </script>
     <h1 align = "center"> Welcome to Yada </h1>
 	<h2 align = "center"> JP Morgan Chase & Co. </h2>
-	<h3 align = "center"> Christopher & Dana Reeve Foundation </Foundationh3>
-	<p> <input type="text" id = 'nameInput' placeholder = 'Username'> </p>
+	<h3 align = "center"> Christopher & Dana Reeve Foundation </h3>
+	<center>
+  <p> <input type="text" id = 'nameInput' placeholder = 'Username'> </p>
     	<p> <input type='text' id = 'typeInput' placeholder = 'Password'> </p>
     	<FORM METHOD="LINK" ACTION="explore.html">
     	<input type="submit" value="Submit">
     	</FORM>
+      <p></p>
+      <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+      <p></p>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <p></p>
 	<a href="explore.html">Explore</a>
      <a href="about.html">About</a>
-    
+ </center>
     <script>
       var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
       $('#typeInput').keypress(function (e) {
@@ -119,11 +124,10 @@ function checkLoginState() {
     </script>
     
    
-    
+ <center>   
     <footer id="foot01"></footer>
     </div>
-<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>	
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+ </center>
 <script src="script.js"></script>
 
 </body>
