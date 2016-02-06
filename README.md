@@ -2,7 +2,7 @@
 -
 -About the Team:
 -
--  -Andrew Zhang
+  -Andrew Zhang
 -  
 -  -Sam Swanson
 -  WebDev: CSS, Java, HTML, PHP
