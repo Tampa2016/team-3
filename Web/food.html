@@ -6,8 +6,7 @@
      <link href="site.css" rel="stylesheet">
      <style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
-      #map { display:inline-block; height: 52%; width: 50%;}
-      #messagesDiv {display:inline-block;margin-right:10px;}
+      #map { height: 50%; width: 50%;}
     </style>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
@@ -19,22 +18,17 @@
 
 <div id="map"></div>
 
-
 <div id='messagesDiv'></div>
-    
-<form id='map'>
-<input type="text" id ='searchTextField'><br>
-</form>
-<div id='messagesDiv'><input type='text' id='nameInput' placeholder='Name'>
-    <input type='text' id='messageInput' placeholder='Message'></div>
-
-<script>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
       var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
       $('#messageInput').keypress(function (e) {
         if (e.keyCode == 13) {
           var name = $('#nameInput').val();
           var text = $('#messageInput').val();
-          myDataRef.push({name: name, text: text});
+          var category = 'food';
+          myDataRef.child("Locations/Location1").push({Comments: {name:name, text:text}});
           $('#messageInput').val('');
         }
       });
@@ -43,14 +37,18 @@
         displayChatMessage(message.name, message.text);
       });
       function displayChatMessage(name, text) {
+        if(category == 'food'){
         $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+        }
       };
     </script>
-
-
+    
 <div>
 
+<form>
+<input type="text" id ='searchTextField'><br>
+</form>
 
 <script type="text/javascript">
 var map;
@@ -60,19 +58,31 @@ function initMap() {
     center: {lat: 27.987, lng: -82.454},
     zoom: 12
   });
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Arby\'s</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Arby\'s</b>, has plenty of accessible parking close to the entrance. ' +
+      'The door was spacious and wide enough for my motorized wheelchair to fit through.'+
+      'Seating was limited however, for accessible. There were only a few tables available'+
+      'where my family and I could dine such that my wheelchair could fit at the table. '+
+      'The restaurant did have a wheelchair accessible bathroom that was kept very clean as well.</p>'+
+      '</div>'+
+      '</div>';
 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
    var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Tampa'
+    title: 'Hello World!'
   });
-
-   marker.addListener('click', function() {
+  marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
 }
-
-
 var input = document.getElementById('searchTextField');
 var options = {
   types: ['(locality)'],
