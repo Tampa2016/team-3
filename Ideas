@@ -7,6 +7,7 @@ Database
   -allow someone to upload image to newsfeed, if we click image, we can pull more information about the image. 
   -display a newsfeed to people using the app (based on location (if time permits))
   -accessabilities: attribiutes, what's available. 
+  -create instances in databsase which contain the location or profile of a place with a respective score. 
 
 Instagram meets yelp, when people take pictures or videos, their location can be targeted for further use.
   -"Explore around me" option. Find nearby locations (in categories such as emergency, hotel, restaurant, entertainment, etc.)
