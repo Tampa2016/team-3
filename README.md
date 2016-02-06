@@ -1,6 +1,6 @@
 --This is the GitHub repository for Team 3.
 
-# Project 1 - *Yada*
+# Code For Good Mobile and Web App - *Yada*
 
 **Yada** is a social app using a variety of softwares.
 
