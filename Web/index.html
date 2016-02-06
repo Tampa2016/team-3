@@ -30,14 +30,22 @@
       version    : 'v2.5'
     });
   };
-
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
+     
    }(document, 'script', 'facebook-jssdk'));
+   function testAPI() { //code that Andrew recently added
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    }); 
+  }
 </script>
 	<div id="main">
     <h1 align = "center"> Welcome to yADA yADA yADA </h1>
@@ -46,7 +54,7 @@
 	<p> <input type="text" id = 'nameInput' placeholder = 'Username'> </p>
     	<p> <input type='text' id = 'typeInput' placeholder = 'Password'> </p>
     <input type="submit">
-	<p> Explore </p>
+	<a href="explore.html">Explore</a>
     
     <script>
       var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
@@ -59,6 +67,8 @@
         }
       });
     </script>
+    
+    
 
     
     <footer id="foot01"></footer>
