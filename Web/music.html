@@ -4,6 +4,8 @@
 <head>
 	<title> Code for Good Team 3 </title>
      <link href="site.css" rel="stylesheet">
+         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 </head>
 
 <body>
@@ -11,6 +13,27 @@
 <h1> Music </h1>
 
 <script src="script.js"></script>
+
+<div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
+      var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.child("Music").push({Name:name, text:text});
+	  displayChatMessage(name, text);
+          $('#messageInput').val('');
+        }
+      });
+	
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
 
 </body>
 </html>
