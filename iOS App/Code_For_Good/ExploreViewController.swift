@@ -8,12 +8,21 @@
 
 import UIKit
 
-class ExploreViewController: UIViewController {
+class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        flowLayout.scrollDirection = .Vertical
+        flowLayout.minimumLineSpacing = 10
+        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.sectionInset = UIEdgeInsetsMake(10, 8, 10, 8)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +31,21 @@ class ExploreViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 15
     }
-    */
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ExploreCollectionViewCell", forIndexPath: indexPath) as! ExploreCollectionViewCell
+        
+        return cell
+    }
+    
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//        let totalwidth = collectionView.bounds.size.width;
+//        let numberOfCellsPerRow = 3
+//        let dimensions = CGFloat(Int(totalwidth) / numberOfCellsPerRow)
+//        return CGSizeMake(dimensions, dimensions)
+//    }
 
 }

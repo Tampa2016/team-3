@@ -17,6 +17,9 @@
 		27E0EFD31C658DF60039F3DB /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFD21C658DF60039F3DB /* PhotoViewController.swift */; };
 		27E0EFD51C6590170039F3DB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFD41C6590170039F3DB /* ProfileViewController.swift */; };
 		27E0EFD71C6590800039F3DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFD61C6590800039F3DB /* LoginViewController.swift */; };
+		27E0EFD91C659BB80039F3DB /* ExploreResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFD81C659BB80039F3DB /* ExploreResultsViewController.swift */; };
+		27E0EFDB1C659BF40039F3DB /* ExploreResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFDA1C659BF40039F3DB /* ExploreResultsTableViewCell.swift */; };
+		27E0EFDD1C659C950039F3DB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFDC1C659C950039F3DB /* InfoViewController.swift */; };
 		AEA1A166D54010FE37C9E421 /* Pods_Code_For_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097984A1B7F6FB1DA118F0DA /* Pods_Code_For_Good.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		27E0EFD21C658DF60039F3DB /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		27E0EFD41C6590170039F3DB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		27E0EFD61C6590800039F3DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		27E0EFD81C659BB80039F3DB /* ExploreResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreResultsViewController.swift; sourceTree = "<group>"; };
+		27E0EFDA1C659BF40039F3DB /* ExploreResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreResultsTableViewCell.swift; sourceTree = "<group>"; };
+		27E0EFDC1C659C950039F3DB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B14B8B421664FAEBFCF7325F /* Pods-Code_For_Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_For_Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Code_For_Good/Pods-Code_For_Good.debug.xcconfig"; sourceTree = "<group>"; };
 		C042591C2F147F7C42737535 /* Pods-Code_For_Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_For_Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Code_For_Good/Pods-Code_For_Good.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +96,9 @@
 			children = (
 				27E0EFD61C6590800039F3DB /* LoginViewController.swift */,
 				27E0EFCE1C6587540039F3DB /* ExploreViewController.swift */,
+				27E0EFD81C659BB80039F3DB /* ExploreResultsViewController.swift */,
 				27E0EFD21C658DF60039F3DB /* PhotoViewController.swift */,
+				27E0EFDC1C659C950039F3DB /* InfoViewController.swift */,
 				27E0EFD41C6590170039F3DB /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				27E0EFD01C6589B80039F3DB /* ExploreCollectionViewCell.swift */,
+				27E0EFDA1C659BF40039F3DB /* ExploreResultsTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -258,12 +267,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E0EFD71C6590800039F3DB /* LoginViewController.swift in Sources */,
+				27E0EFD91C659BB80039F3DB /* ExploreResultsViewController.swift in Sources */,
 				27E0EFD51C6590170039F3DB /* ProfileViewController.swift in Sources */,
 				27E0EFD11C6589B80039F3DB /* ExploreCollectionViewCell.swift in Sources */,
+				27E0EFDD1C659C950039F3DB /* InfoViewController.swift in Sources */,
 				27E0EFBE1C6565580039F3DB /* Code_For_Good.xcdatamodeld in Sources */,
 				27E0EFB61C6565580039F3DB /* AppDelegate.swift in Sources */,
 				27E0EFCF1C6587540039F3DB /* ExploreViewController.swift in Sources */,
 				27E0EFD31C658DF60039F3DB /* PhotoViewController.swift in Sources */,
+				27E0EFDB1C659BF40039F3DB /* ExploreResultsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
