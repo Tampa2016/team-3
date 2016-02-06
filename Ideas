@@ -16,6 +16,7 @@ Incentivize with company sponsorships that give rewards based on points system.
   
   
   URL reference: https://incandescent-inferno-8240.firebaseio.com/
+https://resplendent-fire-3349.firebaseio.com/
 
 var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
       $('#messageInput').keypress(function (e) {
