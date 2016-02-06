@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Code for Good Team 3 </title>
+     <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+
+<h1> Profile/Settings </h1>
+<script>
+	var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
+	
+	var name = myDataRef.child("user/Andrew/Name");
+	var points = myDataRef.child("user/Andrew/Points");
+	
+myDataRef.on('Andrew', function(snapshot){
+	var profile = snapshot.val();
+	var name1 = profile.Name;
+	var name2 = profile.Points;
+};
+</script>
+
+<p> name1 </p>
+<p> name 2</p>
+<script src="script.js"></script>
+
+</body>
+</html>
