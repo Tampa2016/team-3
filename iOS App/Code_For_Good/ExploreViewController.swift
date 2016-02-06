@@ -13,6 +13,10 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
+    var categoryNames: [String] = ["Emergency", "Food", "Hotels", "Transportation", "Entertainment", "Beach", "Park", "Music", "Art", "other"]
+    
+    var categoryImages: [UIImage] = [UIImage(named: "ic_local_hospital")!, UIImage(named: "ic_restaurant_menu")!, UIImage(named: "ic_hotel")!, UIImage(named: "ic_directions_subway")!, UIImage(named: "ic_videogame_asset")!, UIImage(named: "ic_beach_access")!, UIImage(named: "ic_insert_photo")!, UIImage(named: "ic_audiotrack")!, UIImage(named: "ic_toys")!, UIImage(named: "ic_whatshot")!]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,11 +36,14 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return categoryNames.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ExploreCollectionViewCell", forIndexPath: indexPath) as! ExploreCollectionViewCell
+        
+        cell.categoryNameLabel.text = categoryNames[indexPath.row]
+        cell.categoryImageView.image = categoryImages[indexPath.row]
         
         return cell
     }

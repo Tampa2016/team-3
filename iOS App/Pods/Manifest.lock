@@ -14,16 +14,20 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - BDBOAuth1Manager (2.0.0):
+    - AFNetworking/NSURLSession (~> 3.0.0)
   - Firebase (2.5.0)
   - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - BDBOAuth1Manager
   - Firebase (>= 2.5.0)
   - MBProgressHUD (~> 0.9.2)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  BDBOAuth1Manager: 92d17d06f8a648602962304cd2f35ae7394fa001
   Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
