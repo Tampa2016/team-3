@@ -1,29 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='/resources/tutorial/css/example.css'>
   </head>
   <body>
-    <input type="text" id = 'nameInput' placeholder = 'Name'>
-    <input type='text' id = 'typeInput' placeholder = 'Type'>
-  <script> 
-  
-  var ref = new Firebase("https://incandescent-inferno-8240.firebaseio.com/");
-  var userRef = ref.child("user");
-  
-  $('#passInput').keypress(function (e)) {
+    <div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
+      var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
         if (e.keyCode == 13) {
-          var namer = $('#nameInput').val();
-          var type = $('#typeInput').val();
-          
-          userRef.push({
-              Name: namer;
-              Points: 0;
-              Type: type;
-            }
-          });
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.child("user").push({name: name, text: text});
+          $('#messageInput').val('');
         }
-  }
-  </script>
-</body>
+      });
+    </script>
+  </body>
 </html>
