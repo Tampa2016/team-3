@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+
+<title>"yADA yADA yADA"</title>
+<description>Images uploaded</description>
+<link>http://www.directoryoflinksgohere</link>
+
+<item>
+<title>The Title Goes Here</title>
+<description>The description goes here</description>
+<link>http://www.linkgoeshere.com</link>
+</item>
+
+<item>
+<title>Another Title Goes Here</title>
+<description>Another description goes here</description>
+<link>http://www.anotherlinkgoeshere.com</link>
+</item>
+
+</channel>
+</rss>
