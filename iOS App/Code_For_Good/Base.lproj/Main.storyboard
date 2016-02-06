@@ -32,7 +32,7 @@
             </objects>
             <point key="canvasLocation" x="234.66666666666666" y="366.83333333333331"/>
         </scene>
-        <!--Item-->
+        <!--Explore-->
         <scene sceneID="YpY-8k-6RL">
             <objects>
                 <viewController restorationIdentifier="ExploreNavigationController" storyboardIdentifier="ExploreNavigationController" id="nU0-jH-mmb" customClass="ExploreViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,14 +69,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Shr-Vp-e9R"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="ic_public" id="Shr-Vp-e9R"/>
                     <navigationItem key="navigationItem" id="yAu-of-aGm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjK-wo-FTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207" y="-347"/>
         </scene>
-        <!--Item-->
+        <!--Post-->
         <scene sceneID="CLr-eb-bcb">
             <objects>
                 <viewController storyboardIdentifier="PhotoViewController" id="MK5-s1-ppJ" customClass="PhotoViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,14 +89,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="uwo-Jq-2wp"/>
+                    <tabBarItem key="tabBarItem" title="Post" image="ic_add_a_photo" id="uwo-Jq-2wp"/>
                     <navigationItem key="navigationItem" id="jSP-jM-zJ4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQk-l3-90j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207" y="366"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="eJe-lb-zhi">
             <objects>
                 <viewController id="hpY-TM-GnV" customClass="ProfileViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Atp-of-19F"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_person_outline" id="Atp-of-19F"/>
                     <navigationItem key="navigationItem" id="QTk-yP-FmB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHa-B3-1ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,4 +136,9 @@
             <point key="canvasLocation" x="702" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_add_a_photo" width="24" height="24"/>
+        <image name="ic_person_outline" width="24" height="24"/>
+        <image name="ic_public" width="24" height="24"/>
+    </resources>
 </document>
