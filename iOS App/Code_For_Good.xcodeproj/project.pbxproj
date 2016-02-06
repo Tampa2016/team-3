@@ -22,6 +22,7 @@
 		27E0EFDD1C659C950039F3DB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFDC1C659C950039F3DB /* InfoViewController.swift */; };
 		27E0EFDF1C65C2B80039F3DB /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFDE1C65C2B80039F3DB /* YelpClient.swift */; };
 		27E0EFE11C65C2C50039F3DB /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFE01C65C2C50039F3DB /* Business.swift */; };
+		5F8804EB1C65EDF7001EAAB6 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8804EA1C65EDF7001EAAB6 /* EditUserViewController.swift */; };
 		AEA1A166D54010FE37C9E421 /* Pods_Code_For_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097984A1B7F6FB1DA118F0DA /* Pods_Code_For_Good.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		27E0EFDC1C659C950039F3DB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		27E0EFDE1C65C2B80039F3DB /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		27E0EFE01C65C2C50039F3DB /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		5F8804EA1C65EDF7001EAAB6 /* EditUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 		B14B8B421664FAEBFCF7325F /* Pods-Code_For_Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_For_Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Code_For_Good/Pods-Code_For_Good.debug.xcconfig"; sourceTree = "<group>"; };
 		C042591C2F147F7C42737535 /* Pods-Code_For_Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_For_Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Code_For_Good/Pods-Code_For_Good.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 				27E0EFD21C658DF60039F3DB /* PhotoViewController.swift */,
 				27E0EFDC1C659C950039F3DB /* InfoViewController.swift */,
 				27E0EFD41C6590170039F3DB /* ProfileViewController.swift */,
+				5F8804EA1C65EDF7001EAAB6 /* EditUserViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				27E0EFCF1C6587540039F3DB /* ExploreViewController.swift in Sources */,
 				27E0EFE11C65C2C50039F3DB /* Business.swift in Sources */,
 				27E0EFD31C658DF60039F3DB /* PhotoViewController.swift in Sources */,
+				5F8804EB1C65EDF7001EAAB6 /* EditUserViewController.swift in Sources */,
 				27E0EFDB1C659BF40039F3DB /* ExploreResultsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
