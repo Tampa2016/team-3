@@ -3,7 +3,6 @@
 
 <head>
 	<title> Code for Good Team 3 </title>
-	<link href="site.css" rel="stylesheet">
      <link href="site.css" rel="stylesheet">
      <script>
     function validateForm() {
@@ -42,7 +41,7 @@
         if (e.keyCode == 13) {
           var namer = $('#nameInput').val();
           var type = $('#typeInput').val();
-          myDataRef.child("user").update({namer: { points:"0", pass: type}});
+          myDataRef.child("user").push({Name: namer, points:"0", pass: type});
           $('#typeInput').val('');
         }
       });
@@ -56,4 +55,3 @@
 
 </body>
 </html>
-
