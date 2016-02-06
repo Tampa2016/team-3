@@ -4,12 +4,7 @@
 <head>
 	<title> Code for Good Team 3 </title>
      <link href="site.css" rel="stylesheet">
-     <style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #map { display:inline-block; height: 52%; width: 50%;}
-      #messagesDiv {display:inline-block;margin-right:10px;}
-    </style>
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 </head>
 
@@ -17,75 +12,28 @@
 
 <h1> Beach </h1>
 
-<div id="map"></div>
-
+<script src="script.js"></script>
 
 <div id='messagesDiv'></div>
-    
-<form id='map'>
-<input type="text" id ='searchTextField'><br>
-</form>
-<div id='messagesDiv'><input type='text' id='nameInput' placeholder='Name'>
-    <input type='text' id='messageInput' placeholder='Message'></div>
-
-<script>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
       var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
       $('#messageInput').keypress(function (e) {
         if (e.keyCode == 13) {
           var name = $('#nameInput').val();
           var text = $('#messageInput').val();
-          myDataRef.push({name: name, text: text});
+          myDataRef.child("Beach").push({Name:name, text:text});
+	  displayChatMessage(name, text);
           $('#messageInput').val('');
         }
       });
-	myDataRef.on('child_added', function(snapshot) {
-        var message = snapshot.val();
-        displayChatMessage(message.name, message.text);
-      });
+	
       function displayChatMessage(name, text) {
         $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
       };
     </script>
-
-
-<div>
-
-
-<script type="text/javascript">
-var map;
-function initMap() {
-    var myLatLng = {lat: 27.987, lng: -82.454}; //Location of Tampa
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 27.987, lng: -82.454},
-    zoom: 12
-  });
-   var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Tampa'
-  });
-   marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-}
-var input = document.getElementById('searchTextField');
-var options = {
-  types: ['(locality)'],
-  componentRestrictions: {country: 'usa'}
-};
-autocomplete = new google.maps.places.Autocomplete(input, options);
-var searchBox = new google.maps.places.SearchBox(input, {
-  bounds: defaultBounds
-});
-    </script>
-
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjnhr4WEZvNgp7oDRCCGlgwTMonBkJ6g&callback=initMap">
-    </script>
-
-<script src="script.js"></script>
-</div>
 
 </body>
 </html>
