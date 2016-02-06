@@ -11,10 +11,13 @@ Database
 
 Instagram meets yelp, when people take pictures or videos, their location can be targeted for further use.
   -"Explore around me" option. Find nearby locations (in categories such as emergency, hotel, restaurant, entertainment, etc.)
-  Clicking on a page brings up a list with nearby options in that category ranked by ADA accesibility score and Yelp score.
+  -Clicking on a page brings up a list with nearby options in that category ranked by ADA accesibility score and Yelp score.
+  -Possible direct message request option for users to communicate/ask more about a given post
 
 Incentivize with company sponsorships that give rewards based on points system.
   -Points earned for posting photos/videos/reviews
+  -Redeem pionts for giftcards/prizes
+  
 
 
 Reference URL to firebase: https://incandescent-inferno-8240.firebaseio.com/
