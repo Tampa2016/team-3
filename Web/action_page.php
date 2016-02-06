@@ -1,7 +1,5 @@
-<html>
-<body>
+<?php
 
-The comment is <?php echo $_POST["paragraph_text"]; ?><br>
-
-</body>
-</html>
+echo( $_POST["paragraph_text"]);
+include("index.html");
+?>
