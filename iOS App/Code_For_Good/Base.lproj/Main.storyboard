@@ -59,7 +59,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="ic_public" id="Shr-Vp-e9R"/>
-                    <navigationItem key="navigationItem" id="yAu-of-aGm"/>
+                    <navigationItem key="navigationItem" title="Explore" id="yAu-of-aGm">
+                        <barButtonItem key="rightBarButtonItem" title="Points!" id="Usb-uK-Px0"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="vwL-Gu-AXz" id="U6e-mw-GIM"/>
                         <outlet property="flowLayout" destination="i4Z-Vs-NVA" id="OOq-m8-5rD"/>
@@ -69,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="1207" y="-347"/>
         </scene>
-        <!--Explore Results View Controller-->
+        <!--Results-->
         <scene sceneID="ufm-Ju-hBL">
             <objects>
                 <viewController id="352-Li-eI2" customClass="ExploreResultsViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
@@ -142,7 +144,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iAS-L0-RVn"/>
+                    <navigationItem key="navigationItem" title="Results" id="iAS-L0-RVn">
+                        <barButtonItem key="rightBarButtonItem" title="Points!" id="FsN-jd-Gpx"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GcI-yk-FRU" id="fbL-PM-DaT"/>
                     </connections>
@@ -187,7 +191,7 @@
             </objects>
             <point key="canvasLocation" x="702" y="366"/>
         </scene>
-        <!--Info View Controller-->
+        <!--Attributes-->
         <scene sceneID="0YD-iM-eBc">
             <objects>
                 <viewController id="Cft-Db-8jl" customClass="InfoViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,7 +259,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MBL-ln-jHm"/>
+                    <navigationItem key="navigationItem" title="Attributes" id="MBL-ln-jHm">
+                        <barButtonItem key="rightBarButtonItem" title="Points!" id="eLk-Hq-c68"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooO-cm-HgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,7 +312,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ic_person_outline" id="EsI-DD-i3N"/>
-                    <navigationItem key="navigationItem" title="My Profile" id="wG5-Hd-0hU"/>
+                    <navigationItem key="navigationItem" title="My Profile" id="wG5-Hd-0hU">
+                        <barButtonItem key="rightBarButtonItem" title="Points!" id="d5q-uB-XmX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcP-x2-Kw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -385,7 +393,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="366"/>
         </scene>
-        <!--Post-->
+        <!--Upload-->
         <scene sceneID="lGN-Qy-GxK">
             <objects>
                 <viewController storyboardIdentifier="PhotoViewController" id="xKE-G8-5C3" customClass="PhotoViewController" customModule="Code_For_Good" customModuleProvider="target" sceneMemberID="viewController">
@@ -438,7 +446,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="ic_add_a_photo" id="4oa-qB-Q6b"/>
-                    <navigationItem key="navigationItem" id="Txh-QO-hAf"/>
+                    <navigationItem key="navigationItem" title="Upload" id="Txh-QO-hAf">
+                        <barButtonItem key="rightBarButtonItem" title="Points!" id="v8i-QA-4KU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="acceptButton" destination="bE7-f0-oRO" id="df3-wu-0bh"/>
                         <outlet property="cameraButton" destination="8UJ-EK-2C3" id="zUt-g3-Jhc"/>
