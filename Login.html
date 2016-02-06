@@ -5,25 +5,36 @@
   </head>
   <body>
     <input type="text" id = 'nameInput' placeholder = 'Name'>
-    <input type='text' id = 'typeInput' placeholder = 'Type'>
+    <input type='text' id = 'passInput' placeholder = 'Type'>
   <script> 
-  var dataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
-  var userRef = dataRef.child("users");
   
-  $('#typeInput').keypress(function (e) {
-    if(e.keyCode == 13){
-      var name = $('#nameInput').val();
-      var type = $('#typeInput').val();
-      
-      userRef.set({
-        users: 
-        {
-          name:{ 
-          Type: type;}
-        }
-      });
+  var ref = new Firebase("https://incandescent-inferno-8240.firebaseio.com/");
+  
+  $('#passInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var pass = $('#passInput').val();
+          
+          ref.createUser({
+            email: name,
+            password: pass
+            }, function(error, userData) {
+            if (error) {
+              switch (error.code) {
+                case "EMAIL_TAKEN":
+                  console.log("The new user account cannot be created because the email is already in use.");
+                  break;
+                case "INVALID_EMAIL":
+                  console.log("The specified email is not a valid email.");
+                  break;
+              default:
+                console.log("Error creating user:", error);
     }
+  } else {
+    console.log("Successfully created user account with uid:", userData.uid);
   }
+  }
+});
   
   
   </script>
