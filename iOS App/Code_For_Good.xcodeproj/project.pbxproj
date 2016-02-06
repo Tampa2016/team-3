@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		27E0EFB61C6565580039F3DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFB51C6565580039F3DB /* AppDelegate.swift */; };
-		27E0EFB81C6565580039F3DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFB71C6565580039F3DB /* ViewController.swift */; };
 		27E0EFBB1C6565580039F3DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E0EFB91C6565580039F3DB /* Main.storyboard */; };
 		27E0EFBE1C6565580039F3DB /* Code_For_Good.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27E0EFBC1C6565580039F3DB /* Code_For_Good.xcdatamodeld */; };
 		27E0EFC01C6565580039F3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E0EFBF1C6565580039F3DB /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		097984A1B7F6FB1DA118F0DA /* Pods_Code_For_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_For_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E0EFB21C6565580039F3DB /* Code_For_Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code_For_Good.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E0EFB51C6565580039F3DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27E0EFB71C6565580039F3DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27E0EFBA1C6565580039F3DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27E0EFBD1C6565580039F3DB /* Code_For_Good.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Code_For_Good.xcdatamodel; sourceTree = "<group>"; };
 		27E0EFBF1C6565580039F3DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 		27E0EFCA1C6565A70039F3DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				27E0EFB71C6565580039F3DB /* ViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -245,7 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E0EFB81C6565580039F3DB /* ViewController.swift in Sources */,
 				27E0EFBE1C6565580039F3DB /* Code_For_Good.xcdatamodeld in Sources */,
 				27E0EFB61C6565580039F3DB /* AppDelegate.swift in Sources */,
 			);
