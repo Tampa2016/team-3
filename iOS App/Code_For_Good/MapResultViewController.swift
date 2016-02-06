@@ -3,7 +3,7 @@
 //  Yelp
 //
 //  Created by Nicholas Miller.
-//  Copyright © 2016 Timothy Lee. All rights reserved.
+//  Copyright © 2016 Nicholas Miller. All rights reserved.
 //
 
 import UIKit
@@ -36,14 +36,6 @@ class MapResultViewController: UIViewController, CLLocationManagerDelegate, MKMa
         let centerLocation = CLLocation(latitude: latitude, longitude: longitude)
         goToLocation(centerLocation)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if let storedSearch = defaults.objectForKey("storedSearch") as? String {
-            lastSearched = storedSearch
-        }
-        else {
-            lastSearched = "Popular"
-        }
-        
         callYelpAPI(lastSearched!)
         
     }
@@ -63,11 +55,6 @@ class MapResultViewController: UIViewController, CLLocationManagerDelegate, MKMa
                 }
             }
         })
-
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(input, forKey: "storedSearch")
-        defaults.synchronize()
         
         /* Example of Yelp search with more search options specified
         Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
