@@ -38,7 +38,7 @@ Important links are:
 
 ## License
 
-    Copyright [2016] [team-3]
+    Copyright [2016] [Team-3]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
