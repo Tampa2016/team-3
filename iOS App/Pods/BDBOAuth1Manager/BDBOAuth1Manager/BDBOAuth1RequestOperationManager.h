@@ -1,5 +1,5 @@
 //
-//  BDBOAuth1SessionManager.h
+//  BDBOAuth1RequestOperationManager.h
 //
 //  Copyright (c) 2013-2015 Bradley David Bergeron
 //
@@ -20,14 +20,13 @@
 //  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <AFNetworking/AFHTTPSessionManager.h>
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 
 #import "BDBOAuth1RequestSerializer.h"
 
-#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000) || (defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1090)
 
 #pragma mark -
-@interface BDBOAuth1SessionManager : AFHTTPSessionManager
+@interface BDBOAuth1RequestOperationManager : AFHTTPRequestOperationManager
 
 /**
  *  BDBOAuth1RequestSerializer instance used to serialize HTTP requests.
@@ -43,13 +42,13 @@
 #pragma mark Initialization
 
 /**
- *  Initialize a new BDBOAuth1SessionManager instance with the given baseURL, consumerKey, and consumerSecret.
+ *  Initialize a new BDBOAuth1RequestOperationManager instance with the given baseURL, consumerKey, and consumerSecret.
  *
  *  @param baseURL        Base URL for HTTP requests.
  *  @param consumerKey    OAuth consumer key.
  *  @param consumerSecret OAuth consumer secret.
  *
- *  @return New BDBOAuth1SessionManager instance.
+ *  @return New BDBOAuth1RequestOperationManager instance.
  */
 - (instancetype)initWithBaseURL:(NSURL *)baseURL
                     consumerKey:(NSString *)consumerKey
@@ -100,7 +99,6 @@
                           success:(void (^)(BDBOAuth1Credential *requestToken))success
                           failure:(void (^)(NSError *error))failure;
 
-
 /**
  *  Fetch an OAuth access token using a previously-acquired request token.
  *
@@ -117,5 +115,3 @@
                          failure:(void (^)(NSError *error))failure;
 
 @end
-
-#endif
