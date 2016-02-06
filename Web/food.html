@@ -19,8 +19,16 @@
 
 <div id="map"></div>
 
+
 <div id='messagesDiv'></div>
-    <script>
+    
+<form id='map'>
+<input type="text" id ='searchTextField'><br>
+</form>
+<div id='messagesDiv'><input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'></div>
+
+<script>
       var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/');
       $('#messageInput').keypress(function (e) {
         if (e.keyCode == 13) {
@@ -39,12 +47,10 @@
         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
       };
     </script>
-<form id='map'>
-<input type="text" id ='searchTextField'><br>
-</form>
-<div id='messagesDiv'><input type='text' id='nameInput' placeholder='Name'>
-    <input type='text' id='messageInput' placeholder='Message'></div>
+
+
 <div>
+
 
 <script type="text/javascript">
 var map;
