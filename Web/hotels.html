@@ -99,6 +99,29 @@ function initMap() {
     map: map,
     title: 'Hello World!5'
   });
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Hilton Inn</h1>'+
+      '<div id="bodyContent">'+
+      '<p>The <b>Hilton Inn</b>, has a fair amount of accessible parking close to the entrance. ' +
+      'It would have been nice for a worker to have been there ready to help move my luggage inside'+
+      'and to my room. The room itself was spacious, however, the door was a tight fit for my wheelchair.'+
+      'The bathroom was on the smaller side as well, with no handicap seating nor handicap bar in the shower.'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+   var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
   marker.setMap(map);
   marker1.setMap(map);
   marker2.setMap(map);
