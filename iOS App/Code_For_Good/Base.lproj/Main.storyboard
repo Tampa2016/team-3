@@ -338,10 +338,6 @@
                                     <action selector="onLogin:" destination="QPo-IA-nLO" eventType="touchUpInside" id="twq-PJ-zcT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbO-Zd-bVQ">
-                                <rect key="frame" x="0.0" y="470" width="148" height="30"/>
-                                <state key="normal" title="Facebook"/>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wkh-5W-p53">
                                 <rect key="frame" x="65" y="353" width="191" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
