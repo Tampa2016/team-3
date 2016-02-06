@@ -4,13 +4,92 @@
 <head>
 	<title> Code for Good Team 3 </title>
      <link href="site.css" rel="stylesheet">
+     <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 75%; width: 75%;}
+    </style>
 </head>
 
 <body>
 
 <h1> Hotels </h1>
 
+<div id="map"></div>
+    
+<div>
+
+<form>
+<input type="text" id ='searchTextField'><br>
+</form>
+
+<script type="text/javascript">
+var map;
+function initMap() {
+    var myLatLng = {lat: 27.987, lng: -82.454}; //Location of Tampa
+    var myLatLng1 = {lat: 27.968, lng: -82.424};
+    var myLatLng2 = {lat: 27.988, lng: -82.444};
+    var myLatLng3 = {lat: 27.983, lng: -82.469};
+    var myLatLng4 = {lat: 27.971, lng: -82.458};
+    var myLatLng5 = {lat: 27.990, lng: -82.462};
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 27.987, lng: -82.454},
+    zoom: 12
+  });
+   var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+   var marker1 = new google.maps.Marker({
+    position: myLatLng1,
+    map: map,
+    title: 'Hello World!1'
+  });
+     var marker2 = new google.maps.Marker({
+    position: myLatLng2,
+    map: map,
+    title: 'Hello World!2'
+  });
+     var marker3 = new google.maps.Marker({
+    position: myLatLng3,
+    map: map,
+    title: 'Hello World!3'
+  });
+   var marker4 = new google.maps.Marker({
+    position: myLatLng4,
+    map: map,
+    title: 'Hello World!4'
+  });
+   var marker5 = new google.maps.Marker({
+    position: myLatLng5,
+    map: map,
+    title: 'Hello World!5'
+  });
+  marker.setMap(map);
+  marker1.setMap(map);
+  marker2.setMap(map);
+  marker3.setMap(map);
+  marker4.setMap(map);
+  marker5.setMap(map);
+}
+var input = document.getElementById('searchTextField');
+var options = {
+  types: ['(locality)'],
+  componentRestrictions: {country: 'usa'}
+};
+autocomplete = new google.maps.places.Autocomplete(input, options);
+var searchBox = new google.maps.places.SearchBox(input, {
+  bounds: defaultBounds
+});
+    </script>
+
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjnhr4WEZvNgp7oDRCCGlgwTMonBkJ6g&callback=initMap">
+    </script>
+
 <script src="script.js"></script>
+</div>
 
 </body>
 </html>
