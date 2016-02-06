@@ -36,21 +36,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func signUp(sender: AnyObject) {
-        if (usernameTextField.text != "" && passwordTextField.text != "") {
-            var person = ["password": passwordTextField.text!]
-            var usersRef = ref.childByAppendingPath("users")
-//            var users = [usernameTextField.text!: person]
-//            usersRef.setValue(users)
-            
-            usersRef.childByAutoId().setValue([
-                "username": usernameTextField.text!,
-                "password": passwordTextField.text!
-            ])
-            
-        }
-    }
 
     @IBAction func onLogin(sender: AnyObject) {
         TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
@@ -92,7 +77,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                         print("\(user["username"])")
                         print("\(user["password"])")
                         
-                        if (String(user["username"]) == self.usernameTextField.text! && String(user["password"]) == self.passwordTextField.text!) {
+                        if (String(user["email"]) == self.usernameTextField.text! && String(user["password"]) == self.passwordTextField.text!) {
                             self.isMatch = true
                         }
 
@@ -101,14 +86,20 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     
                 }
             })
-        }
         
-        if (isMatch) {
-            return true
+            if (isMatch) {
+                return true
+            }
+            else {
+                return false
+            }
         }
-        else {
-            return false
-        }
+        return true
     }
+    
+    @IBAction func tappedScreen(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
 
 }
