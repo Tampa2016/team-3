@@ -9,7 +9,7 @@ The developers are:
 - Andrew Zhang
 - Sam Swanson
 - Scott Liu
-- Kristie Harvick
+- Kristie Harvick   
 
 Time spent: **18** hours spent in total
 
