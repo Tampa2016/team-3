@@ -3,19 +3,41 @@
 
 <head>
 	<title> Code for Good Team 3 </title>
-	<link href="site.css" rel="stylesheet">
-	<a href="Login.html">click here</a>
+     <link href="site.css" rel="stylesheet">
+     <script>
+    function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
 </head>
 
+
+
 <body>
-	
 	<div id="main">
-	<h1> Welcome to yADA yADA yADA </h1>
-	<h2> JPMorgan Chase & Co. </h2>
-	<h3> Christopher & Dana Reeve Foundation</h3>
-	
+    <h1 align = "center"> Welcome to yADA yADA yADA </h1>
+	<h2 align = "center"> JP Morgan Chase & Co. </h2>
+	<h3 align = "center"> Christopher & Dana Reeve </Foundationh3>
+	<p> <input type="text" id = 'nameInput' placeholder = 'Username'> </p>
+    <p> <input type='text' id = 'typeInput' placeholder = 'Password'> </p>
+    <input type="submit">
 	<p> Explore </p>
-	</div>
+    
+    <form name="myForm" action="demo_form.asp"
+    onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+    </form>
+
+    
+    <footer id="foot01"></footer>
+    </div>
 	
+<script src="script.js"></script>
+
 </body>
 </html>
