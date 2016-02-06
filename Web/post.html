@@ -12,6 +12,7 @@
 
 <p></p>
 
+<p> Upload a Photo </p>
 <input type="image" src="upload.png" width="30px"/>
 <input type="file" id="my_file" style="display: none;" />
 
@@ -24,6 +25,23 @@ $("input[type='image']").click(function() {
 
 <script src="script.js"></script>
 
+<p> Good Handicap Ramps </p>
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+<p> Accessible Restrooms </p>
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+<p> Wide Doors </p>
 <div class="onoffswitch">
     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
     <label class="onoffswitch-label" for="myonoffswitch">
@@ -56,12 +74,12 @@ $("input[type='image']").click(function() {
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "ON";
+    content: "YES";
     padding-left: 10px;
     background-color: #34A7C1; color: #FFFFFF;
 }
 .onoffswitch-inner:after {
-    content: "OFF";
+    content: "NO";
     padding-right: 10px;
     background-color: #EEEEEE; color: #999999;
     text-align: right;
