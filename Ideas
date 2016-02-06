@@ -24,7 +24,7 @@ var myDataRef = new Firebase('https://incandescent-inferno-8240.firebaseio.com/'
           var name = $('#nameInput').val();
           var text = $('#messageInput').val();
           myDataRef.push({name: name, text: text});
-          $('#messageInput').val('');
+          $('#messageInput').val(''); 
         }
       });
 	myDataRef.on('child_added', function(snapshot) {
