@@ -25,9 +25,15 @@
 <script type="text/javascript">
 var map;
 function initMap() {
+    var myLatLng = {lat: 27.987, lng: -82.454}; //Location of Tampa
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 27.987, lng: -82.454},
     zoom: 12
+  });
+   var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
   });
 }
 var input = document.getElementById('searchTextField');
@@ -35,9 +41,7 @@ var options = {
   types: ['(locality)'],
   componentRestrictions: {country: 'usa'}
 };
-
 autocomplete = new google.maps.places.Autocomplete(input, options);
-
 var searchBox = new google.maps.places.SearchBox(input, {
   bounds: defaultBounds
 });
